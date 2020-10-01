@@ -21,7 +21,6 @@ public class PatientController {
 	PatientService patientService;
 
 	@PostMapping("/addNewRecord")
-	@Cacheable(value = "getRecordWith")
 	public String insertPatientRecord(@RequestBody PatientRecord patientRecord) {
 		patientService.insertPatientDetails(patientRecord);
 		return "Record Inserted";
