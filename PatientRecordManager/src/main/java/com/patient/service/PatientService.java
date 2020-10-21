@@ -8,9 +8,11 @@ import com.patient.model.PatientRecord;
 
 @Service
 public interface PatientService {
-	public void insertPatientDetails(PatientRecord details);
+	public PatientRecord insertPatientDetails(PatientRecord details);
 
 	public List<PatientRecord> getAll();
 
 	public String deleteById(Long id);
+
+	public PatientRecord getSinglePatientRecord(Long id);
 }

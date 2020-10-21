@@ -7,6 +7,8 @@ import lombok.Data;
 @Data
 @ConfigurationProperties("spring")
 public class Credential {
-	private String userName;
-	private String password;
+	/* User Name for Hashicorp Vault */
+	private String USERNAME;
+	/* Password for Hashicorp Vault */
+	private String PASSWORD;
 }

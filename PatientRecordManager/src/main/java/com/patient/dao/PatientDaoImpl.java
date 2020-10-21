@@ -1,5 +1,7 @@
 package com.patient.dao;
 
+import java.sql.Timestamp;
+import java.util.Calendar;
 import java.util.List;
 
 import org.hibernate.Query;
@@ -31,8 +33,8 @@ public class PatientDaoImpl implements PatientDao {
 		configuration.addAnnotatedClass(PatientRecord.class);
 		configuration.setProperty("connection.driver_class", "com.mysql.jdbc.Driver");
 		configuration.setProperty("hibernate.connection.url", "jdbc:mysql://localhost:3306/patient");
-		configuration.setProperty("hibernate.connection.username", credential.getUserName());
-		configuration.setProperty("hibernate.connection.password", credential.getPassword());
+		configuration.setProperty("hibernate.connection.username", credential.getUSERNAME());
+		configuration.setProperty("hibernate.connection.password", credential.getPASSWORD());
 		configuration.setProperty("dialect", "org.hibernate.dialect.MySQLDialect");
 		configuration.setProperty("hibernate.hbm2ddl.auto", "update");
 		configuration.setProperty("show_sql", "true");
@@ -44,14 +46,18 @@ public class PatientDaoImpl implements PatientDao {
 	}
 
 	@Override
-	public void insertPatientDetailsIntoDb(PatientRecord details) {
+	public PatientRecord insertPatientDetailsIntoDb(PatientRecord details) {
 		SessionFactory sessionactory = PatientDaoImpl.getSessionFactory();
 		Session session = sessionactory.openSession();
 		Transaction tx = session.getTransaction();
 		tx.begin();
+		Calendar cal = Calendar.getInstance();
+		details.setInputDateTime(new Timestamp(cal.getTimeInMillis()));
+		details.setLastUpdateDateTime(new Timestamp(cal.getTimeInMillis()));
 		session.save(details);
 		session.getTransaction().commit();
 		session.close();
+		return details;
 	}
 
 	@Override
@@ -80,5 +86,17 @@ public class PatientDaoImpl implements PatientDao {
 		session.getTransaction().commit();
 		session.close();
 		return String.valueOf("Deleted");
+	}
+
+	@Override
+	public PatientRecord fetchSinglePatient(Long id) {
+		SessionFactory sessionactory = PatientDaoImpl.getSessionFactory();
+		Session session = sessionactory.openSession();
+		Transaction tx = session.getTransaction();
+		tx.begin();
+		PatientRecord patientRecord = (PatientRecord) session.get(PatientRecord.class, id);
+		session.getTransaction().commit();
+		session.close();
+		return patientRecord;
 	}
 }

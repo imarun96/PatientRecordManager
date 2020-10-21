@@ -1,5 +1,6 @@
 package com.patient.service;
 
+import java.util.Calendar;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,18 +15,24 @@ public class PatientServiceImpl implements PatientService {
 	PatientDao patientDao;
 
 	@Override
-	public void insertPatientDetails(PatientRecord details) {
-		patientDao.insertPatientDetailsIntoDb(details);
+	public PatientRecord insertPatientDetails(PatientRecord details) {
+		int year = Calendar.getInstance().get(Calendar.YEAR);
+		details.setAge(year-Integer.valueOf(details.getDob().split("-")[0]));
+		return patientDao.insertPatientDetailsIntoDb(details);
 	}
 
 	@Override
 	public List<PatientRecord> getAll() {
-		List<PatientRecord> patientList = patientDao.getAll();
-		return patientList;
+		return patientDao.getAll();
 	}
 
 	@Override
 	public String deleteById(Long id) {
 		return patientDao.delete(id);
+	}
+
+	@Override
+	public PatientRecord getSinglePatientRecord(Long id) {
+		return patientDao.fetchSinglePatient(id);
 	}
 }

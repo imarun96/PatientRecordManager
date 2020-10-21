@@ -1,0 +1,17 @@
+logging:
+    file:
+        name: D:/Downloads/ELK/logs/patient-record-module.log
+management:
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+server:
+    port: 8003
+spring:
+    application:
+        name: Patient-Service
+    cloud:
+        consul:
+            host: localhost
+            port: 6060

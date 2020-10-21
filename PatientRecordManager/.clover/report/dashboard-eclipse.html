@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=${charset}"/>
+    <link rel="SHORTCUT ICON" href="img/clover.ico" />
+    <link rel="stylesheet" href="style.css" media="all"/>
+    <link rel="stylesheet" href="aui/css/aui.min.css" media="all"/>
+    <link rel="stylesheet" href="aui/css/aui-experimental.min.css" media="all"/>
+    <!--[if IE 9]><link rel="stylesheet" href="aui/css/aui-ie9.min.css" media="all"/><![endif]-->
+
+    <script src="jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="aui/js/aui.min.js" type="text/javascript"></script>
+    <script src="aui/js/aui-experimental.min.js" type="text/javascript"></script>
+    <script src="aui/js/aui-soy.min.js" type="text/javascript"></script>
+    <script src="clover.js" type="text/javascript"></script>
+
+    <title>Clover</title>
+</head>
+
+<body style="min-width: 200px;">
+
+<div class="aui-group">
+    <div class="aui-item">
+        <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>
+                    <label title="A summary of the projects overall coverage.">Coverage</label>
+                    <label class="aui-button aui-button-subtle" onclick="self.location='cloverview:coverage'">
+                        <span class="aui-icon aui-icon-small aui-iconfont-arrows-right"></span>
+                    </label>
+                </h3>
+            </header>
+            <div class="dashboard-widget-content">
+                
+                <span>
+                    18 classes,
+                    25 /
+                    33 elements
+                </span>
+                <div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.75757575</span>75.8%</div><div style="display: table-cell">
+ <div title="75.8% Covered"  style="min-width:200px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:75.8%"></div></div></div></div>
+            </div>
+        </div>
+
+        <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>
+                    <label title="A summary of results of all tests that were run.">Test results</label>
+                    <label class="aui-button aui-button-subtle" onclick="self.location='cloverview:testresults'">
+                        <span class="aui-icon aui-icon-small aui-iconfont-arrows-right"></span>
+                    </label>
+                </h3>
+            </header>
+            <div class="dashboard-widget-content">
+                                <span>
+                    0 / 0 tests
+                    (0 secs)
+                </span>
+                                        <div class="aui-message aui-message-warning">
+        <p class="title">
+            <strong>No test results</strong>
+        </p>
+        <p>No test results could be found. Please ensure that you have instrumented your unit tests correctly.</p>
+    </div>
+                            </div>
+        </div>
+
+    
+    
+        <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>
+                    <label title="The most complex packages in the project.">Most complex packages</label>
+                    <label class="aui-button aui-button-subtle" onclick="self.location='cloverview:coverage'">
+                        <span class="aui-icon aui-icon-small aui-iconfont-arrows-right"></span>
+                    </label>
+                </h3>
+            </header>
+            <div class="dashboard-widget-content">
+                
+                <table>
+                                            
+                                                <tr><td>1. </td><td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.42857143</span>42.9%</div><div style="display: table-cell">
+ <div title="42.9% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:42.9%"></div></div></div></div></td><td><a class="tag" href="javapkg:com.patient">com.patient</a> (7)</td></tr>
+                                            
+                                                <tr><td>2. </td><td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">1.0</span>100%</div><div style="display: table-cell">
+ <div title="100% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:100%"></div></div></div></div></td><td><a class="tag" href="javapkg:com.patient.config">com.patient.config</a> (7)</td></tr>
+                                            
+                                                <tr><td>3. </td><td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.8333333</span>83.3%</div><div style="display: table-cell">
+ <div title="83.3% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:83.3%"></div></div></div></div></td><td><a class="tag" href="javapkg:com.patient.dao">com.patient.dao</a> (6)</td></tr>
+                                            
+                                                <tr><td>4. </td><td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">1.0</span>100%</div><div style="display: table-cell">
+ <div title="100% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:100%"></div></div></div></div></td><td><a class="tag" href="javapkg:com.patient.controller">com.patient.controller</a> (5)</td></tr>
+                                            
+                                                <tr><td>5. </td><td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">1.0</span>100%</div><div style="display: table-cell">
+ <div title="100% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:100%"></div></div></div></div></td><td><a class="tag" href="javapkg:com.patient.service">com.patient.service</a> (4)</td></tr>
+                                    </table>
+            </div>
+        </div>
+
+        <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>
+                    <label title="The most complex classes in the project.">Most complex classes</label>
+                    <label class="aui-button aui-button-subtle" onclick="self.location='cloverview:coverage'">
+                        <span class="aui-icon aui-icon-small aui-iconfont-arrows-right"></span>
+                    </label>
+                </h3>
+            </header>
+            <div class="dashboard-widget-content">
+                <table>
+                                            
+                                                <tr><td>1. </td><td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.8333333</span>83.3%</div><div style="display: table-cell">
+ <div title="83.3% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:83.3%"></div></div></div></div></td><td>
+                            <a  class="tag" href="javaclass:/com/patient/dao/PatientDaoImpl.java#22_14"  title="com.patient.dao.PatientDaoImpl">PatientDaoImpl</a>
+                            (6)
+                        </td></tr>
+                                            
+                                                <tr><td>2. </td><td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">1.0</span>100%</div><div style="display: table-cell">
+ <div title="100% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:100%"></div></div></div></div></td><td>
+                            <a  class="tag" href="javaclass:/com/patient/controller/PatientController.java#30_14"  title="com.patient.controller.PatientController">PatientController</a>
+                            (5)
+                        </td></tr>
+                                            
+                                                <tr><td>3. </td><td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td><td>
+                            <a  class="tag" href="javaclass:/com/patient/PatientRecordManagerApplicationTests.java#28_14"  title="com.patient.PatientRecordManagerApplicationTests">PatientRecordManagerApplicationTests</a>
+                            (4)
+                        </td></tr>
+                                            
+                                                <tr><td>4. </td><td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">1.0</span>100%</div><div style="display: table-cell">
+ <div title="100% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:100%"></div></div></div></div></td><td>
+                            <a  class="tag" href="javaclass:/com/patient/service/PatientServiceImpl.java#13_14"  title="com.patient.service.PatientServiceImpl">PatientServiceImpl</a>
+                            (4)
+                        </td></tr>
+                                            
+                                                <tr><td>5. </td><td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">1.0</span>100%</div><div style="display: table-cell">
+ <div title="100% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:100%"></div></div></div></div></td><td>
+                            <a  class="tag" href="javaclass:/com/patient/PatientRecordManagerApplication.java#15_14"  title="com.patient.PatientRecordManagerApplication">PatientRecordManagerApplication</a>
+                            (3)
+                        </td></tr>
+                                    </table>
+            </div>
+        </div>
+
+        <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>
+                    <label title="A list of classes that have the highest complexity and least coverage. These pose the greatest potential risk to the project.">
+                        Top 10 project risks</label>
+                    <label class="aui-button aui-button-subtle" onclick="self.location='cloverview:toprisks'">
+                        <span class="aui-icon aui-icon-small aui-iconfont-arrows-right"></span>
+                    </label>
+                </h3>
+            </header>
+            <div class="dashboard-widget-content">
+                <div>
+                    
+                                                                            <a class="tag" href="javaclass:/com/patient/dao/PatientDaoImpl.java#22_14"
+                               style="font-size: 25px;color:#89c495"
+                               title="Average Method Complexity - 1 , Coverage - 83.3% ">PatientDaoImpl</a>
+                                            
+                                                                            <a class="tag" href="javaclass:/com/patient/aop/LoggingAdvice.java#22_14"
+                               style="font-size: 25px;color:#e7a19b"
+                               title="Average Method Complexity - 1 , Coverage - 50% ">LoggingAdvice</a>
+                                            
+                                                                            <a class="tag" href="javaclass:/com/patient/PatientRecordManagerApplicationTests.java#28_14"
+                               style="font-size: 25px;color:#d04437"
+                               title="Average Method Complexity - 1 , Coverage - 0% ">PatientRecordManagerApplicationTests</a>
+                                            
+                                                                            <a class="tag" href="javaclass:/com/patient/repository/LoggingSaverRepository.java#10_14"
+                               style="font-size: 25px;color:#d04437"
+                               title="Average Method Complexity - 1 , Coverage - 0% ">LoggingSaverRepository</a>
+                                            
+                                                                            <a class="tag" href="javaclass:/com/patient/endpoint/CustomEndPoint.java#14_14"
+                               style="font-size: 25px;color:#d04437"
+                               title="Average Method Complexity - 1 , Coverage - 0% ">CustomEndPoint</a>
+                                            
+                                                                            <a class="tag" href="javaclass:/com/patient/model/LoggingSaver.java#16_14"
+                               style="font-size: 9px;color:#d04437"
+                               title="Average Method Complexity - 0 , Coverage -  -  ">LoggingSaver</a>
+                                            
+                                                                            <a class="tag" href="javaclass:/com/patient/model/PatientRecord.java#25_14"
+                               style="font-size: 9px;color:#d04437"
+                               title="Average Method Complexity - 0 , Coverage -  -  ">PatientRecord</a>
+                                            
+                                                                            <a class="tag" href="javaclass:/com/patient/model/EmergencyContact.java#17_14"
+                               style="font-size: 9px;color:#d04437"
+                               title="Average Method Complexity - 0 , Coverage -  -  ">EmergencyContact</a>
+                                            
+                                                                            <a class="tag" href="javaclass:/com/patient/endpoint/CustomEndPoint.java#25_7"
+                               style="font-size: 9px;color:#d04437"
+                               title="Average Method Complexity - 0 , Coverage -  -  ">EndPointResponse</a>
+                                            
+                                                                            <a class="tag" href="javaclass:/com/patient/Credential.java#9_14"
+                               style="font-size: 9px;color:#d04437"
+                               title="Average Method Complexity - 0 , Coverage -  -  ">Credential</a>
+                                                            </div>
+            </div>
+        </div>
+
+            <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>
+                    <label title="A list of methods least tested, ranked in decreasing complexity.">Least tested methods</label>
+                    <label class="aui-button aui-button-subtle" onclick="self.location='cloverview:quickwins'">
+                        <span class="aui-icon aui-icon-small aui-iconfont-arrows-right"></span>
+                    </label>
+                </h3>
+            </header>
+            <div class="dashboard-widget-content">
+                <table>
+                                    </table>
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+</body>
+</html>
